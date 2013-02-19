@@ -6,7 +6,14 @@
   <?php
     $number = 5;
     $string = "I like candy.";
-    echo "{$number} {$string}";
+
+    function displayString()
+    {
+      global $number;
+      echo "{$number} {$GLOBALS['string']}";
+    }
+
+    displayString();
   ?>
  </body>
 </html>
